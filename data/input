@@ -1,0 +1,39 @@
+
+
+### CEA analysis performed on Wed 19-Apr-2023 19:51:53
+
+# Problem Type: "Rocket" (Infinite Area Combustor)
+
+prob case=_______________8456 ro equilibrium
+
+# Pressure (1 value):
+p,atm= 34.4738
+# Chamber/Exit Pressure Ratio (1 value):
+pi/p= 34.0136
+
+# Oxidizer/Fuel Wt. ratio (21 values):
+o/f= 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7
+
+# You selected the following fuels and oxidizers:
+reac
+fuel C2H5OH(L)         wt%=100.0000  t,k= 300.000
+oxid N2O               wt%=100.0000  t,k= 200.000 rho,g/cc=   1.220
+
+# You selected these options for output:
+# short version of output
+output short
+# Proportions of any products will be expressed as Mass Fractions.
+output massf
+# Heat will be expressed as siunits
+output siunits
+# Transport properties calculated
+output transport
+
+# Plot parameters:
+output plot p t mach isp
+
+# Input prepared by this script:/var/www/sites/cearun.grc.nasa.gov/cgi-bin/CEARUN/prepareInputFile.cgi
+
+### IMPORTANT:  The following line is the end of your CEA input file!
+end
+
