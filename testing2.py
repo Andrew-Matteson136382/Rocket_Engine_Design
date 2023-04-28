@@ -3,6 +3,7 @@
 class CEA:
     def __int__(self, mr, pressure, temperature, density, gamma, mach):
         self.mr = []
+        self.pcpe = []
         self.pressure = []
         self.temperature = []
         self.density = []
@@ -12,7 +13,7 @@ class CEA:
 with open('data/output') as ceaOut:
     ceaOutLines = [line.rstrip() for line in ceaOut]
 
-    ceaEq = [[], [], [], [], [], []]
+    ceaEq = [[], [], [], [], [], [], []]
 
     for i in range(len(ceaOutLines)):
         if 'EQUILIBRIUM' in ceaOutLines[i]:
@@ -22,10 +23,30 @@ with open('data/output') as ceaOut:
                 elif 'O/F' in ceaOutLines[j]:
                     tmp = ceaOutLines[j].split()
                     ceaEq[0].append(tmp[1])
-                elif ' Pinf/P' in ceaOutLines[j]:
+                elif 'Pinf/P' in ceaOutLines[j]:
                     tmp = ceaOutLines[j].split()
                     for k in range(1, len(tmp), 1):
-                        ceaEq.append(tmp[k])
+                        ceaEq[1].append(tmp[k])
+                elif 'P, BAR' in ceaOutLines[j]:
+                    tmp = ceaOutLines[j].split()
+                    for k in range(2, len(tmp), 1):
+                        ceaEq[2].append(tmp[k])
+                elif 'T, K' in ceaOutLines[j]:
+                    tmp = ceaOutLines[j].split()
+                    for k in range(2, len(tmp), 1):
+                        ceaEq[3].append(tmp[k])
+                elif 'RHO, KG/CU M' in ceaOutLines[j]:
+                    tmp = ceaOutLines[j].split()
+                    for k in range(3, len(tmp), 1):
+                            ceaEq[4].append(tmp[k])
+                elif 'GAMMAs' in ceaOutLines[j]:
+                    tmp = ceaOutLines[j].split()
+                    for k in range(1, len(tmp), 1):
+                        ceaEq[5].append(tmp[k])
+                elif 'MACH NUMBER' in ceaOutLines[j]:
+                    tmp = ceaOutLines[j].split()
+                    for k in range(2, len(tmp), 1):
+                        ceaEq[6].append(tmp[k])
     print(ceaEq)
     # # print(ceaEq)
 
