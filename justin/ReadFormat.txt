@@ -1,0 +1,10 @@
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K
+ FUEL        C2H5OH(L)                    ?   ?    ?
+ OXIDANT     N2O                          ?     ?    ?
+
+   WITH EQUILIBRIUM REACTIONS
+
+ Cp, KJ/(KG)(K)    ?   ?   ?   ?
+ CONDUCTIVITY      ?   ?   ?   ?
+ PRANDTL NUMBER    ?   ?   ?   ?

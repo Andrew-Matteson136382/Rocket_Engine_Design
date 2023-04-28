@@ -1,0 +1,10 @@
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K
+ FUEL        C2H5OH(L)                    1.0000000   -277301.667    300.000
+ OXIDANT     N2O                          1.0000000     78448.201    200.000
+
+   WITH EQUILIBRIUM REACTIONS
+
+ Cp, KJ/(KG)(K)    1.9727   1.9464   5.8187
+ CONDUCTIVITY      2.2440   2.0086   3.4927
+ PRANDTL NUMBER    0.5613   0.5661   0.6692
