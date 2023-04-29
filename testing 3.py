@@ -1,4 +1,8 @@
-for i in range(0, 100, 1):
-    for j in range(0, 100, 1):
-        for k in range(0, 420, 1):
-            print(k)
+mylist = []
+
+ceaEq = [[], [], [], [], [], [], []]
+for i in range(0, 4, 1):
+    mylist.append([[], [], [], [], [], [], []])
+
+mylist[1][3].append(1)
+print(mylist)
