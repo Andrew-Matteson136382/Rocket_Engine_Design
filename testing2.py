@@ -39,8 +39,18 @@ with open('data/output') as ceaOut:
                         ceaEq[-1][6].append(tmp[k])
 
 for i in range(len(ceaEq)):
-    if ceaEq[i] == ceaEq[-1]:
+    if (ceaEq[i] == ceaEq[-1]) or (i >= len(ceaEq)):
         break
     elif (ceaEq[i][0] == ceaEq[i+1][0]) and (ceaEq[i][1][1] == ceaEq[i+1][1][1]):
         for j in range(2, len(ceaEq[i+1][1]), 1):
-            ceaEq[i][1].append(ceaOut[1][1][j])
+            ceaEq[i][1].append(ceaEq[i+1][1][j])
+            ceaEq[i][2].append(ceaEq[i+1][2][j])
+            ceaEq[i][3].append(ceaEq[i+1][3][j])
+            ceaEq[i][4].append(ceaEq[i+1][4][j])
+            ceaEq[i][5].append(ceaEq[i+1][5][j])
+            ceaEq[i+1].append('delete')
+
+for i in range(len(ceaEq[2])):
+    # for j in range(len((ceaEq[i]))):
+    print(ceaEq[2][i])
+# print(ceaEq[1])
